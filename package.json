@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "inquirer": "^9.1.4"
+  },
+  "name": "team-profile-generator",
+  "description": "generates profiles for team based on user input",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "npm index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reethd/Team-Profile-Generator.git"
+  },
+  "author": "reeth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reethd/Team-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/reethd/Team-Profile-Generator#readme"
+}
