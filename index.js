@@ -1,5 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+const html = require("./lib/generatehtml");
 const Employee = require("./lib/employee");
 const Manager = require("./lib/manager");
 const Engineer = require("./lib/engineer");
@@ -10,14 +11,8 @@ const {
   engineerQuest,
   internQuest,
 } = require("./lib/questions");
-const generateHtml = require("./lib/generateHtml");
 const team = [];
 
-function writeToFile(fileName, data) {
-  fs.writeFile(fileName, generateHtml(data), (err, data) => {
-    console.log("HTML created!");
-  });
-}
 
 function promptMenu() {
   inquirer.prompt(menu).then((answer) => {
@@ -28,8 +23,8 @@ function promptMenu() {
       promptIntern();
     }
     if (answer.menuChoice === "Finalize team") {
-      console.log(team);
-      console.log("team created!");
+      console.log("Your html file is in the 'dist/' folder");
+      generateHtmlFile();
     }
   });
 }
@@ -72,5 +67,9 @@ function promptIntern() {
     promptMenu();
   });
 }
+
+const generateHtmlFile = () => {
+  fs.writeFileSync("./dist/index.html", html(team).join(""), "utf-8");
+};
 
 promptManager();
