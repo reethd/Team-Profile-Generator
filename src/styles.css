@@ -18,17 +18,19 @@ h1 {
     color:black;
     border:5px;
     padding: 12px;
-    border-style: groove;
+    border-radius: 10px;
+    border-style:outset;
 
 }
 
 .card-container {
     display: flex;
-    flex-direction:wrap;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     background-color: rgb(92, 83, 69);
-    border:5px;
-    border-style: groove;
+    /* border:5px; */
+    /* border-style: groove; */
 }
 
 .employee-card {
@@ -41,7 +43,8 @@ h1 {
     flex-direction: column;
     align-items: center; 
     border: 5px;
-    border-style:double;
+    border-style: double;
+    border-radius: 10px;
 
 }
 
